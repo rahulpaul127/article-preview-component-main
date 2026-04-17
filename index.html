@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Article preview component</title>
+</head>
+<body>
+  <main class="page">
+    <article class="card">
+      <div class="card__media">
+        <img
+          class="card__image"
+          src="./images/drawers.jpg"
+          alt="Green drawers with a vase and framed artwork on top"
+        >
+      </div>
+
+      <div class="card__content">
+        <div class="card__text">
+          <h1 class="card__title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h1>
+
+          <p class="card__description">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I've got some simple tips to help
+            you make any room feel complete.
+          </p>
+        </div>
+
+        <footer class="card__footer">
+          <div class="card__author">
+            <img
+              class="card__avatar"
+              src="./images/avatar-michelle.jpg"
+              alt="Portrait of Michelle Appleton"
+            >
+
+            <div class="card__author-details">
+              <p class="card__author-name">Michelle Appleton</p>
+              <p class="card__date">28 Jun 2020</p>
+            </div>
+          </div>
+
+          <button
+            class="share-button"
+            type="button"
+            aria-label="Share this article"
+            aria-controls="share-panel"
+            aria-expanded="false"
+          >
+            <img src="./images/icon-share.svg" alt="" aria-hidden="true">
+          </button>
+
+          <div class="share-panel" id="share-panel" hidden>
+            <p class="share-panel__label">Share</p>
+
+            <a
+              class="share-panel__link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Share on Facebook"
+            >
+              <img src="./images/icon-facebook.svg" alt="" aria-hidden="true">
+            </a>
+
+            <a
+              class="share-panel__link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Share on Twitter"
+            >
+              <img src="./images/icon-twitter.svg" alt="" aria-hidden="true">
+            </a>
+
+            <a
+              class="share-panel__link"
+              href="https://www.pinterest.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Share on Pinterest"
+            >
+              <img src="./images/icon-pinterest.svg" alt="" aria-hidden="true">
+            </a>
+          </div>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/rahulpaul127">Rahul Paul</a>.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

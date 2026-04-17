@@ -1,0 +1,271 @@
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --copy-color-accessible: #5d6d84;
+  --muted-color-accessible: #616f86;
+  --shadow-color: rgba(72, 85, 106, 0.2);
+  font-size: 13px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 2rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: "Manrope", sans-serif;
+  color: var(--copy-color-accessible);
+  background: var(--light-grayish-blue);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.page {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: min(100%, 25.125rem);
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 2.5rem 2rem -2rem var(--shadow-color);
+}
+
+.card__media {
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__image {
+  width: 100%;
+  height: 15.5rem;
+  object-fit: cover;
+  object-position: center 27%;
+}
+
+.card__content {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.75rem 2.5rem 1.25rem;
+}
+
+.card__text {
+  display: grid;
+  gap: 1rem;
+}
+
+.card__title,
+.card__description,
+.card__author-name,
+.card__date,
+.share-panel__label {
+  margin: 0;
+}
+
+.card__title {
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.28rem;
+  line-height: 1.35;
+  letter-spacing: 0.015em;
+}
+
+.card__description {
+  color: var(--copy-color-accessible);
+  line-height: 1.6;
+  letter-spacing: 0.012em;
+}
+
+.card__footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2.5rem;
+  padding-top: 0.2rem;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 0;
+}
+
+.card__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.card__author-name {
+  color: var(--very-dark-grayish-blue);
+  font-weight: 700;
+}
+
+.card__date {
+  margin-top: 0.25rem;
+  color: var(--muted-color-accessible);
+}
+
+.share-button {
+  position: relative;
+  z-index: 2;
+  width: 2.45rem;
+  height: 2.45rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--light-grayish-blue);
+  transition: background-color 180ms ease;
+}
+
+.share-button img {
+  width: 1.15rem;
+  transition: filter 180ms ease;
+}
+
+.share-button:hover {
+  background: hsl(210, 46%, 90%);
+}
+
+.share-button:focus-visible {
+  outline: 2px solid var(--desaturated-dark-blue);
+  outline-offset: 3px;
+}
+
+.share-button[aria-expanded="true"] {
+  background: var(--desaturated-dark-blue);
+}
+
+.share-button[aria-expanded="true"] img {
+  filter: brightness(0) invert(1);
+}
+
+.share-panel[hidden] {
+  display: none;
+}
+
+.share-panel {
+  position: absolute;
+  left: -2.5rem;
+  right: -2.5rem;
+  bottom: -1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  min-height: 6rem;
+  padding: 1.75rem 5.5rem 1.75rem 2.5rem;
+  background: var(--very-dark-grayish-blue);
+  border-radius: 0 0 1rem 1rem;
+}
+
+.share-panel__label {
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+}
+
+.share-panel__link {
+  display: inline-grid;
+  place-items: center;
+}
+
+.share-panel__link:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+.attribution {
+  color: var(--copy-color-accessible);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+  body {
+    padding: 2rem;
+  }
+
+  .card {
+    width: min(100%, 56rem);
+    display: grid;
+    grid-template-columns: 18.1rem 1fr;
+  }
+
+  .card__media {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .card__image {
+    height: 100%;
+    min-height: 21.6rem;
+    object-position: left center;
+  }
+
+  .card__content {
+    gap: 1.6rem;
+    padding: 2.5rem 3.1rem 2.35rem;
+  }
+
+  .card__title {
+    font-size: 1.62rem;
+  }
+
+  .card__footer {
+    padding-top: 0;
+  }
+
+  .share-panel {
+    left: auto;
+    right: -5.35rem;
+    bottom: calc(100% + 1.75rem);
+    width: 19rem;
+    min-height: auto;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.75rem 1.5rem rgba(72, 85, 106, 0.18);
+  }
+
+  .share-panel::after {
+    content: "";
+    position: absolute;
+    right: 5.55rem;
+    bottom: -0.72rem;
+    width: 1.45rem;
+    height: 1.45rem;
+    background: var(--very-dark-grayish-blue);
+    transform: rotate(45deg);
+  }
+}
