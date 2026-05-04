@@ -25,8 +25,8 @@ This is a solution to the Frontend Mentor Article preview component challenge.
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [GitHub Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/article-preview-component-Z37cWLXE3N)
+- Live Site URL: [GitHub Pages](https://rahulpaul127.github.io/article-preview-component-main/)
 
 ---
 
